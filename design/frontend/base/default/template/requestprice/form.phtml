@@ -1,0 +1,102 @@
+<?php
+
+//print_r(Mage::app()->getRequest()->getParam('id'))
+?>
+<style type="text/css">
+    body {
+        background-color: #C7C7C7;
+    }
+</style>
+
+<div class="page-title">
+    <h2><?php echo $this->__('Заявка на прайс:') ?></h2>
+</div><!--Form Tittle-->
+<div class="page-title">
+    <h2><?php echo $this->__('Lesson14 Create Person') ?></h2>
+</div>
+<!--Form Information-->
+<!--<form id="person-form-validate" method="post" action="<?php echo $this->getActionOfForm()?>">
+    <input type="hidden" name="productId"  value="<?php echo Mage::app()->getRequest()->getParam('id')?>" />
+    <div class="fieldset">
+        <h2 class="legend"><?php echo $this->__('Person Information')?></h2>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="customer-name">
+                    <div class="field name-firstname">
+                        <label class="required" for="firstname"><em>*</em><?php echo $this->__('Name')?></label>
+                        <div class="input-box">
+                            <input type="text" class="input-text required-entry" maxlength="255" title="Name" value="" name="name" id="name">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="buttons-set">
+        <p class="required">* <?php echo $this->__('Required Fields')?></p>
+        <p class="back-link"><a class="back-link" href="<?php echo $this->getBaseUrl();?>"><small>&laquo;</small>Back</a></p>
+        <button class="button" title="Submit" type="submit"><span><span><?php echo $this->__('Submit')?></span></span></button>
+        <button class="button" type="button" onclick="closePopup()">Close</button>
+
+    </div>
+</form>
+<form name="newsletter-popup-validate-detail" id="idForm" action="<?php echo $this->getActionOfForm()?>" method="post">
+    <input type="hidden" name="ProductId"  value="<?php echo Mage::app()->getRequest()->getParam('id')?>" />
+    <label for="Name"><?php echo $this->__('Name') ?> <span class="required">*</span></label><br />
+    <input id="Name" name="Name" class="input-text required-entry" />
+    <label for="Email"><?php echo $this->__('Email') ?> <span class="required">*</span></label><br />
+    <input type="text" name="Email" id="Email" class="input-text required-entry validate-email" />
+    <label for="Comment"><?php echo $this->__('Comment') ?> <span class="required">*</span></label><br />
+    <input id="Comment" name="Comment" class="input-text required-entry" />
+
+    <button class="button" title="Submit" type="submit"><span><span><?php echo $this->__('Submit')?></span></span></button>
+    <button class="button" type="button" onclick="closePopup()">Close</button>
+</form>-->
+<form id="form-configurator" class="form-configurator " name="formconfigurator" action="" method="post" enctype="multipart/form-data">
+
+    <div class="item" id="item-1">
+        <label class="conf_label">BlaBla</label>
+        <div class="inputselect">
+            <select class="selector" name="name1" id="input-1"><option value="2" selected="selected">2</option><option value="4">4</option></select>
+        </div>
+    </div>
+
+    <div class="item" id="item-2">
+        <label class="conf_label">Quantity :</label>
+        <div class="inputselect">
+            <input id="input-quantity" name="quantity" type="number" value="1" min="1" max="50" style="width: 63px;" maxlength="2" class="input-text required-entry"></input>
+        </div>
+    </div>
+
+    <strong><span class="devis_Nb" id="Devis_totalF"></span></strong>
+</form>
+
+
+
+
+
+<script type="text/javascript">
+    function closePopup() {
+        parent.closeIFrame();
+    }
+   /* jQuery("#idForm").submit(function(e) {
+console.log(jQuery("#idForm").serialize());
+       var url = "/requestprice/index/post; // the script where you handle the form input.
+
+        jQuery.ajax({
+            type: "POST",
+            url: url,
+            data: jQuery("#idForm").serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                alert(data); // show response from the php script.
+            }
+        });
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+    });*/
+
+</script>
+
+

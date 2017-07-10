@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <!--<default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/Magedoc/Like/like.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/Magedoc/Like/like.js</name>
+            </action>
+        </reference>
+    </default>-->
+
+    <default>
+        <reference name="head">
+            <action method="addJs"><script>prototype/validation.js</script></action>
+            <action method="addJs"><script>prototype/window.js</script></action>
+            <action method="addItem"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addItem"><type>js_css</type><name>/skin/adminhtml/default/default/lib/prototype/windows/themes/magento.css</name></action>
+        </reference>
+        <reference name="catalog_product_price_template">
+            <action method="addPriceBlockType"><type>simple</type><block>catalog/product_price</block><template>requestprice/price.phtml</template></action>
+        </reference>
+    </default>
+
+    <requestprice_index_form>
+        <action method="addJs"><script>prototype/validation.js</script></action>
+        <block type="requestprice/form" name="root" output="toHtml" template="requestprice/form.phtml" />
+    </requestprice_index_form>
+
+</layout>

@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Magentotutorial_CustomerMod>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Magentotutorial_CustomerMod>
+    </modules>
+</config>

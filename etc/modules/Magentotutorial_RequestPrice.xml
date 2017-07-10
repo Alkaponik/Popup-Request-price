@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Magentotutorial_RequestPrice>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Magentotutorial_RequestPrice>
+    </modules>
+</config>

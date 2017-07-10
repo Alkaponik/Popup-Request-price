@@ -1,0 +1,45 @@
+<?php
+$productId = $this->getRequest()->getParam('id');
+//$productId = $params['id'];
+?>
+<button onclick="showPopup(<?php echo "'/requestprice/index/form?id=$productId'" ?>)"
+        id="<?php //echo 'count_like_'.$productId;?>" class="" type="button">Request Price</button>
+<form name="test-form" id="my-custom-form" action="<?php echo $this->getActionOfForm()?>" method="post">
+    <label for="firstname"><?php echo $this->__('First name') ?> <span class="required">*</span></label><br />
+    <input id="firstname" name="firstname" class="input-text required-entry" />
+    <label for="lastname"><?php echo $this->__('Last name') ?> <span class="required">*</span></label><br />
+    <input id="lastname" name="lastname" class="input-text required-entry" />
+    <label for="useremail"><?php echo $this->__('Email') ?> <span class="required">*</span></label><br />
+    <input type="text" name="useremail" id="useremail" class="input-text required-entry validate-email" />
+    <input type="submit" name="submit" value="<?php echo $this->__('Submit') ?>" />
+</form>
+
+<script type="text/javascript">
+
+    //< ![CDATA[
+    var customForm = new VarienForm('my-custom-form');
+    //]]>
+</script>
+<!--<div id="popup" style='display:none'>
+
+    <div id="popupContact">
+
+        <form action="#" id="form" method="post" name="form">
+            <h2>Contact Us</h2>
+            <hr>
+            <label id="name">Name<input name="name" type="text"></label>
+            <label id="phno">Phone Number<input name="phno" type="text"></label>
+            <label id="email">Email<input name="email" type="text"></label>
+            <label id="msg">Enquiry<textarea name="message"></textarea></label>
+            <a href="javascript:%20check_empty()" id="submit">Submit</a>
+        </form>
+    </div>
+
+
+<h1>Click Button To Popup Form Using Javascript</h1>
+<button id="popup" onclick="div_show()">Popup</button>-->
+<script type="text/javascript">
+
+
+
+</script>
